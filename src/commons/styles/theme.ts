@@ -35,55 +35,55 @@ const theme = {
   font-size: 24px;
   line-height: 32px;`,
     b0M: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 26px;`,
     b0R: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;`,
     b0L: `
-  font-family: 'Noto Sans KR';
+  font-family:'Noto Sans', 'Noto Sans KR';
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 26px;`,
     b1M: `
-  font-family: 'Noto Sans KR';
+  font-family:'Noto Sans', 'Noto Sans KR';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;`,
     b1R: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;`,
     b1L: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 23px;`,
     b2M: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
    font-style: normal;
   font-weight: 500;
    font-size: 14px;
   line-height: 20px;`,
     b2R: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;`,
     b2L: `
-  font-family: 'Noto Sans KR';
+  font-family: 'Noto Sans','Noto Sans KR';
   font-style: normal;
   font-weight: 300;
   font-size: 14px;

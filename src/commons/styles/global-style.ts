@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     .notosanskr * { 
          font-family: 'Noto Sans KR', sans-serif;
     }
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
     * {
         box-sizing: border-box;
     }

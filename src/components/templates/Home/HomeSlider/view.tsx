@@ -1,23 +1,19 @@
-import Tag from "components/atom/Tag";
-import Slider from "components/modules/Slider";
 import React from "react";
+import { BottomSheet } from "components/atom";
+import FeatureActions from "components/organism/FeatureActions";
 import * as S from "./style";
 
 export type HomeSliderProps = {
   isVisible: boolean;
-  data: any[];
-  onClick: () => void;
 };
 
-const HomeSliderView = ({ isVisible, data, onClick }: HomeSliderProps) => {
+const HomeSliderView = ({ isVisible }: HomeSliderProps) => {
   return (
-    <Slider isVisible={isVisible}>
-      <S.Container>
-        <S.RowContainer>
-          {data && data.map((t) => <Tag title={t.title} onClick={onClick} />)}
-        </S.RowContainer>
-      </S.Container>
-    </Slider>
+    <S.Container>
+      <BottomSheet isVisible={isVisible}>
+        <FeatureActions />
+      </BottomSheet>
+    </S.Container>
   );
 };
 

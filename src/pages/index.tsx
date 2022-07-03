@@ -1,11 +1,13 @@
-import { HomeBoard, HomeHeader } from "components/templates/Home";
+import { Header } from "components/organism";
+import { HomeBoard, HomeSlider } from "components/templates/Home";
 import React from "react";
 
 const Home = () => {
   return (
     <>
-      <HomeHeader />
+      <Header />
       <HomeBoard />
+      <HomeSlider />
     </>
   );
 };

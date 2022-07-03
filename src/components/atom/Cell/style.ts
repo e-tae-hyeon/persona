@@ -1,9 +1,16 @@
 import theme from "commons/styles/theme";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div<{ isSelected: boolean }>`
   padding: 16px;
   width: 400px;
   border-radius: 8px;
   box-shadow: ${theme.layout.shadow100};
+  cursor: pointer;
+
+  ${(props) =>
+    props.isSelected &&
+    css`
+      border: 2px solid ${theme.palette.primary};
+    `}
 `;

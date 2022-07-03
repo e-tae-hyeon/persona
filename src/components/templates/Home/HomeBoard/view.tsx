@@ -1,20 +1,14 @@
-import Layout from "components/atom/Layout";
+import { Person, Personalities } from "components/organism";
 import React from "react";
-import HomePerson from "../HomePerson";
-import HomePersonalities from "../HomePersonalities";
-import HomeSlider from "../HomeSlider";
 
 import * as S from "./style";
 
 const HomeBoardView = () => {
   return (
-    <Layout>
-      <S.Container>
-        <HomePerson />
-        <HomePersonalities />
-        <HomeSlider />
-      </S.Container>
-    </Layout>
+    <S.Container>
+      <Person />
+      <Personalities />
+    </S.Container>
   );
 };
 

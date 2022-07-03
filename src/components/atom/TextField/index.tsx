@@ -4,7 +4,7 @@ import * as S from "./style";
 export type TextFieldProps = {
   placeholder: string;
   value: string;
-  onChange: () => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   maxLength: number;
 };
 
