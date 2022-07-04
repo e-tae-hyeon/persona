@@ -24,9 +24,9 @@ const HomePersonalities = () => {
   } = useSlider();
   const { name } = useName();
   const { job } = useJob();
-  const { lifeStyle } = useLifeStyle();
-  const { character } = useCharacter();
-  const { painPoint } = usePainPoint();
+  const { lifeStyle, onRemoveLifeStyle } = useLifeStyle();
+  const { character, onRemoveCharacter } = useCharacter();
+  const { painPoint, onRemovePainPoint } = usePainPoint();
 
   const props: PersonalitiesProps = {
     name: {
@@ -42,7 +42,6 @@ const HomePersonalities = () => {
     },
     job: {
       title: PERSONALITY_JOB_LABEL,
-
       onClick: () => {
         onSetSelected("job");
         onSetSliderContent("job");
@@ -54,7 +53,6 @@ const HomePersonalities = () => {
     },
     lifeStyle: {
       title: PERSONALITY_LIFE_STYLE_LABEL,
-
       onClick: () => {
         onSetSelected("lifeStyle");
         onSetSliderContent("lifeStyle");
@@ -63,10 +61,13 @@ const HomePersonalities = () => {
       },
       contents: lifeStyle,
       isSelected: selected === "lifeStyle",
+      onContextMenu: (e) => {
+        e.preventDefault();
+        onRemoveLifeStyle(e.currentTarget.value);
+      },
     },
     character: {
       title: PERSONALITY_CHARACTER_LABEL,
-
       onClick: () => {
         onSetSelected("character");
         onSetSliderContent("character");
@@ -75,10 +76,13 @@ const HomePersonalities = () => {
       },
       contents: character,
       isSelected: selected === "character",
+      onContextMenu: (e) => {
+        e.preventDefault();
+        onRemoveCharacter(e.currentTarget.value);
+      },
     },
     painPoint: {
       title: PERSONALITY_PAIN_POINT_LABEL,
-
       onClick: () => {
         onSetSelected("painPoint");
         onSetSliderContent("painPoint");
@@ -87,6 +91,10 @@ const HomePersonalities = () => {
       },
       contents: painPoint,
       isSelected: selected === "painPoint",
+      onContextMenu: (e) => {
+        e.preventDefault();
+        onRemovePainPoint(e.currentTarget.value);
+      },
     },
   };
 

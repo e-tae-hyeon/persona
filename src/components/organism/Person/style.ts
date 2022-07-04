@@ -7,10 +7,11 @@ export const Container = styled.div`
 `;
 export const RowContainer = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   gap: 10px;
+  margin: 0 auto;
 `;
 export const Age = styled.div``;
 export const Gender = styled.div``;

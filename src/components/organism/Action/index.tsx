@@ -17,7 +17,7 @@ const Action = () => {
   const { onAddLifeStyle } = useLifeStyle();
   const { onAddCharacter } = useCharacter();
   const { onAddPainPoint } = usePainPoint();
-  const { form, onChangeForm } = useForm();
+  const { form, onChangeForm, onResetForm } = useForm();
   const { jobData, lifeStyleData, characterData } = usePersonality();
 
   const props: ActionProps = {
@@ -44,6 +44,7 @@ const Action = () => {
           onAddPainPoint(form);
           break;
       }
+      onResetForm();
     },
     textFieldProps: {
       placeholder: ACTION_TEXT_FIELD_PLACEHOLDER,

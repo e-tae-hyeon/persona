@@ -28,27 +28,30 @@ const personaSlice = createSlice({
       state.job = action.payload;
     },
     addLifeStyle: (state, action: PayloadAction<string>) => {
-      state.lifeStyle.push(action.payload);
+      if (!state.lifeStyle.includes(action.payload))
+        state.lifeStyle.push(action.payload);
     },
     removeLifeStyle: (state, action: PayloadAction<string>) => {
       state.lifeStyle = state.lifeStyle.filter(
-        (value) => value === action.payload
+        (value) => value !== action.payload
       );
     },
     addCharacter: (state, action: PayloadAction<string>) => {
-      state.character.push(action.payload);
+      if (!state.character.includes(action.payload))
+        state.character.push(action.payload);
     },
     removeCharacter: (state, action: PayloadAction<string>) => {
       state.character = state.character.filter(
-        (value) => value === action.payload
+        (value) => value !== action.payload
       );
     },
     addPainPoint: (state, action: PayloadAction<string>) => {
-      state.painPoint.push(action.payload);
+      if (!state.painPoint.includes(action.payload))
+        state.painPoint.push(action.payload);
     },
     removePainPoint: (state, action: PayloadAction<string>) => {
       state.painPoint = state.painPoint.filter(
-        (value) => value === action.payload
+        (value) => value !== action.payload
       );
     },
   },

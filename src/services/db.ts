@@ -1,13 +1,3 @@
-export const image = [
-  "10Male",
-  "20Male",
-  "30Male",
-  "40Male",
-  "10Female",
-  "20Female",
-  "30Female",
-  "40Female",
-];
 export const job = [
   "교사",
   "마케터",
@@ -63,11 +53,11 @@ export const lifeStyle = [
   "인간관계는 피곤해",
 ];
 export const character = [
-  "사교적인",
   "개방적인",
   "말이 많은",
   "반응적인",
   "태평한",
+  "사교적인",
   "걱정 없는",
   "적극적인",
   "낙관적인",
@@ -81,9 +71,7 @@ export const character = [
   "조용한",
   "사려깊은",
   "일관적인",
-  "사교적인",
   "계획적인",
-  "사교적인",
   "재미있는",
   "진지한",
   "성실한",

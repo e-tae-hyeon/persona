@@ -3,9 +3,13 @@ import React from "react";
 import HomeSliderView, { HomeSliderProps } from "./view";
 
 const HomeSlider = () => {
-  const { slider } = useSlider();
+  const { slider, onOpenSlider, onSetSelected } = useSlider();
   const props: HomeSliderProps = {
     isVisible: slider,
+    onBackdrop: () => {
+      onSetSelected(null);
+      onOpenSlider();
+    },
   };
   return <HomeSliderView {...props} />;
 };

@@ -14,7 +14,7 @@ const Person = () => {
       onSetSliderContent("image");
       onOpenSlider();
     },
-    age: `${age}대`,
+    age: `${age}'s`,
     gender,
     isSelected: selected === "image",
   };

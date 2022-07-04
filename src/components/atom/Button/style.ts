@@ -4,6 +4,7 @@ import styled from "styled-components";
 export type Theme = "primary" | "secondary" | "transparent";
 type ContainerProps = {
   theme: Theme;
+  full: boolean;
 };
 
 export const Container = styled.button<ContainerProps>`
@@ -11,7 +12,8 @@ export const Container = styled.button<ContainerProps>`
   justify-content: center;
   align-items: center;
   padding: 0 1rem;
-  height: 2rem;
+  width: ${(props: ContainerProps) => props.full && "100%"};
+  min-height: 2rem;
   border-radius: 1rem;
   background: ${(props: ContainerProps) =>
     props.theme === "primary"

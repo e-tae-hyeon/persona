@@ -5,6 +5,7 @@ const initialState: UiState = {
   slider: false,
   form: "",
   selected: null,
+  menual: false,
 };
 
 const uiSlice = createSlice({
@@ -17,14 +18,23 @@ const uiSlice = createSlice({
     changeForm: (state, action: PayloadAction<string>) => {
       state.form = action.payload;
     },
+    resetForm: (state) => {
+      state.form = initialState.form;
+    },
     setSelected: (state, action: PayloadAction<Personality>) => {
-      if (state.selected === action.payload) state.selected = null;
-      else {
-        state.selected = action.payload;
-      }
+      state.selected = action.payload;
+    },
+    toggleMenual: (state) => {
+      state.menual = !state.menual;
     },
   },
 });
 
-export const { toggleSlider, changeForm, setSelected } = uiSlice.actions;
+export const {
+  toggleSlider,
+  changeForm,
+  resetForm,
+  setSelected,
+  toggleMenual,
+} = uiSlice.actions;
 export default uiSlice.reducer;

@@ -6,4 +6,5 @@ export const Container = styled.h1`
   justify-content: center;
   align-items: center;
   ${theme.fontStyle.h2B}
+  color: ${theme.palette.primary}
 `;

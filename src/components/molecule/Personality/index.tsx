@@ -10,6 +10,7 @@ export type PersonalityProps = {
   content?: string;
   contents?: string[];
   isSelected: boolean;
+  onContextMenu?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const Personality = ({
@@ -18,12 +19,17 @@ const Personality = ({
   onClick,
   contents,
   isSelected,
+  onContextMenu,
 }: PersonalityProps) => {
   return (
     <S.Container>
       <Label title={title} />
       <Cell onClick={onClick} isSelected={isSelected}>
-        <Feature contents={contents} content={content} />
+        <Feature
+          contents={contents}
+          content={content}
+          onContextMenu={onContextMenu}
+        />
       </Cell>
     </S.Container>
   );

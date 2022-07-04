@@ -16,10 +16,8 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     html {
-        min-height: 100vh;
     }
     body{
-        min-height: 100%;
         background-color: #ffffff;
         font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     }

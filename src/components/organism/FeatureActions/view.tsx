@@ -1,4 +1,4 @@
-import { ADD_BUTTON } from "commons/constants/string";
+import { ADD_BUTTON, SELECTION_BUTTON } from "commons/constants/string";
 import { Button } from "components/atom";
 import React from "react";
 import { SliderContent } from "store/slider/type";
@@ -9,9 +9,14 @@ import * as S from "./style";
 export type FeatureActionsProps = {
   content: SliderContent;
   onAdd: () => void;
+  isInput: boolean;
 };
 
-const FeatureActionsView = ({ content, onAdd }: FeatureActionsProps) => {
+const FeatureActionsView = ({
+  content,
+  onAdd,
+  isInput,
+}: FeatureActionsProps) => {
   if (content === "image")
     return (
       <S.Container>
@@ -20,14 +25,12 @@ const FeatureActionsView = ({ content, onAdd }: FeatureActionsProps) => {
     );
   return (
     <S.Container>
-      <S.Add>
-        {content !== "name" && (
-          <Button onClick={onAdd} theme="primary">
-            {ADD_BUTTON}
-          </Button>
-        )}
-      </S.Add>
       <Action />
+      {content !== "name" && content !== "painPoint" && (
+        <Button onClick={onAdd} theme="primary" full>
+          {!isInput ? ADD_BUTTON : SELECTION_BUTTON}
+        </Button>
+      )}
     </S.Container>
   );
 };

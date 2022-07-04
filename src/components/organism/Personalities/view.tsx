@@ -19,13 +19,19 @@ const PersonalitiesView = ({
   painPoint,
 }: PersonalitiesProps) => {
   return (
-    <S.Container>
-      <Personality {...name} />
-      <Personality {...job} />
-      <Personality {...lifeStyle} />
-      <Personality {...character} />
-      <Personality {...painPoint} />
-    </S.Container>
+    // <S.Container>
+    <>
+      <S.PersonInfo>
+        <Personality {...name} />
+        <Personality {...job} />
+      </S.PersonInfo>
+      <S.Container>
+        <Personality {...lifeStyle} />
+        <Personality {...character} />
+        <Personality {...painPoint} />
+      </S.Container>
+    </>
+    // </S.Container>
   );
 };
 

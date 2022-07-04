@@ -5,12 +5,13 @@ import { FeatureActions } from "components/organism";
 
 export type HomeSliderProps = {
   isVisible: boolean;
+  onBackdrop: () => void;
 };
 
-const HomeSliderView = ({ isVisible }: HomeSliderProps) => {
+const HomeSliderView = ({ isVisible, onBackdrop }: HomeSliderProps) => {
   return (
     <S.Container>
-      <BottomSheet isVisible={isVisible}>
+      <BottomSheet isVisible={isVisible} onBackdrop={onBackdrop}>
         <FeatureActions />
       </BottomSheet>
     </S.Container>

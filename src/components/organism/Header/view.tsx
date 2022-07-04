@@ -3,15 +3,12 @@ import { Button, Title } from "components/atom";
 import React from "react";
 import * as S from "./style";
 
-export type HeaderProps = {
-  onSave: () => void;
-};
+export type HeaderProps = {};
 
-const HeaderView = ({ onSave }: HeaderProps) => {
+const HeaderView = ({}: HeaderProps) => {
   return (
     <S.Container>
       <Title title={LOGOTYPE} />
-      <Button onClick={onSave}>{SAVE_BUTTON}</Button>
     </S.Container>
   );
 };

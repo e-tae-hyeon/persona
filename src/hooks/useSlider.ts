@@ -12,8 +12,8 @@ const useSlider = () => {
   const { content, isTypeInput } = useSelector((state) => state.slider);
 
   const onOpenSlider = useCallback(() => {
-    if (!slider) dispatch(toggleSlider());
-  }, [dispatch, slider]);
+    dispatch(toggleSlider());
+  }, [dispatch]);
   const onSetSliderContent = useCallback(
     (value: SliderContent) => {
       dispatch(setSlider(value));

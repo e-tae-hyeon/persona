@@ -1,3 +1,4 @@
+import { MAX_LIFE_STYLE_LIMIT } from "commons/constants/number";
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "store";
@@ -8,8 +9,11 @@ const useLifeStyle = () => {
   const { lifeStyle } = useSelector((state) => state.persona);
 
   const onAddLifeStyle = useCallback(
-    (value: string) => dispatch(addLifeStyle(value)),
-    [dispatch]
+    (value: string) => {
+      if (lifeStyle.length < MAX_LIFE_STYLE_LIMIT)
+        dispatch(addLifeStyle(value));
+    },
+    [dispatch, lifeStyle]
   );
   const onRemoveLifeStyle = useCallback(
     (value: string) => dispatch(removeLifeStyle(value)),
