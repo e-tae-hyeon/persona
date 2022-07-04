@@ -3,13 +3,14 @@ import React from "react";
 
 import * as S from "./style";
 
-const HomeBoardView = () => {
+// eslint-disable-next-line react/display-name
+const HomeBoardView = React.forwardRef<HTMLDivElement>(({}, ref) => {
   return (
-    <S.Container>
+    <S.Container ref={ref}>
       <Person />
       <Personalities />
     </S.Container>
   );
-};
+});
 
 export default HomeBoardView;

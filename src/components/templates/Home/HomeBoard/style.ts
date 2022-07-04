@@ -14,6 +14,7 @@ export const Container = styled.div`
   margin: 0 auto;
   margin-top: 16px;
   padding: 16px;
+  background-color: ${theme.palette.white};
   border-radius: 8px;
   box-shadow: ${theme.layout.shadow100};
 `;

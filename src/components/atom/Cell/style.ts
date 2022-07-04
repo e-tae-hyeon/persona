@@ -11,6 +11,7 @@ export const Container = styled.div<{ isSelected: boolean }>`
   border-radius: 8px;
   border: 2px solid ${theme.palette.white};
   box-shadow: ${theme.layout.shadow100};
+  background-color: ${theme.palette.white};
   cursor: pointer;
 
   ${(props) =>

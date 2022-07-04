@@ -4,7 +4,7 @@ export type PersonaState = {
   name: string;
   job: string;
   lifeStyle: string[];
-  charater: string[];
+  character: string[];
   painPoint: string[];
 };
 

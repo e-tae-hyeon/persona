@@ -1,8 +1,9 @@
 import React from "react";
 import HomeBoardView from "./view";
 
-const HomeBoard = () => {
-  return <HomeBoardView />;
-};
+// eslint-disable-next-line react/display-name
+const HomeBoard = React.forwardRef<HTMLDivElement>(({}, ref) => {
+  return <HomeBoardView ref={ref} />;
+});
 
 export default HomeBoard;

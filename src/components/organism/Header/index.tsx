@@ -1,8 +1,10 @@
 import React from "react";
 import HeaderView, { HeaderProps } from "./view";
 
-const Header = () => {
-  const props: HeaderProps = {};
+const Header = ({ onSave }: HeaderProps) => {
+  const props: HeaderProps = {
+    onSave,
+  };
 
   return <HeaderView {...props} />;
 };
