@@ -1,13 +1,14 @@
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "store";
-import { setSlider, toggleType } from "store/slider";
+import { setSlider, setTypeSelection, toggleType } from "store/slider";
 import { SliderContent } from "store/slider/type";
-import { toggleSlider } from "store/ui";
+import { setSelected, toggleSlider } from "store/ui";
+import { Personality } from "store/ui/type";
 
 const useSlider = () => {
   const dispatch = useDispatch();
-  const { slider } = useSelector((state) => state.ui);
+  const { slider, selected } = useSelector((state) => state.ui);
   const { content, isTypeInput } = useSelector((state) => state.slider);
 
   const onOpenSlider = useCallback(() => {
@@ -24,14 +25,25 @@ const useSlider = () => {
     () => dispatch(toggleType()),
     [dispatch]
   );
+  const onSetSliderTypeSelection = useCallback(
+    () => dispatch(setTypeSelection()),
+    [dispatch]
+  );
+  const onSetSelected = useCallback(
+    (value: Personality) => dispatch(setSelected(value)),
+    [dispatch]
+  );
 
   return {
     slider,
+    selected,
     content,
     isTypeInput,
     onOpenSlider,
     onSetSliderContent,
     onToggleSliderType,
+    onSetSliderTypeSelection,
+    onSetSelected,
   };
 };
 

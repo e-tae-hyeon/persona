@@ -1,7 +1,7 @@
 import React from "react";
 import { BottomSheet } from "components/atom";
-import FeatureActions from "components/organism/FeatureActions";
 import * as S from "./style";
+import { FeatureActions } from "components/organism";
 
 export type HomeSliderProps = {
   isVisible: boolean;

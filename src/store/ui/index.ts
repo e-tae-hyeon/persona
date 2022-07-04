@@ -1,9 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { UiState } from "./type";
+import { Personality, UiState } from "./type";
 
 const initialState: UiState = {
   slider: false,
   form: "",
+  selected: null,
 };
 
 const uiSlice = createSlice({
@@ -16,8 +17,14 @@ const uiSlice = createSlice({
     changeForm: (state, action: PayloadAction<string>) => {
       state.form = action.payload;
     },
+    setSelected: (state, action: PayloadAction<Personality>) => {
+      if (state.selected === action.payload) state.selected = null;
+      else {
+        state.selected = action.payload;
+      }
+    },
   },
 });
 
-export const { toggleSlider, changeForm } = uiSlice.actions;
+export const { toggleSlider, changeForm, setSelected } = uiSlice.actions;
 export default uiSlice.reducer;

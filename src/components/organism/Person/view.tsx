@@ -9,13 +9,20 @@ export type PersonProps = {
   onClick: () => void;
   age: string;
   gender: string;
+  isSelected: boolean;
 };
 
-const PersonView = ({ image, onClick, age, gender }: PersonProps) => {
+const PersonView = ({
+  image,
+  onClick,
+  age,
+  gender,
+  isSelected,
+}: PersonProps) => {
   return (
     <S.Container>
       <PersonImage image={image} />
-      <Cell onClick={onClick} isSelected>
+      <Cell onClick={onClick} isSelected={isSelected}>
         <S.RowContainer>
           <S.Age>{age}</S.Age>
           <S.Gender>{gender}</S.Gender>

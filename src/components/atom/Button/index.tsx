@@ -3,13 +3,19 @@ import * as S from "./style";
 
 export type ButtonProps = {
   children?: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  value?: string;
   theme?: S.Theme;
 };
 
-const Button = ({ children, onClick, theme = "transparent" }: ButtonProps) => {
+const Button = ({
+  children,
+  onClick,
+  value,
+  theme = "transparent",
+}: ButtonProps) => {
   return (
-    <S.Container onClick={onClick} theme={theme}>
+    <S.Container onClick={onClick} theme={theme} value={value}>
       {children}
     </S.Container>
   );

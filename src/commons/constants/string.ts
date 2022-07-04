@@ -7,7 +7,7 @@ export const PERSONALITY_LIFE_STYLE_LABEL = "LIFE STYLE";
 export const PERSONALITY_CHARACTER_LABEL = "CHARACTER";
 export const PERSONALITY_PAIN_POINT_LABEL = "PAIN POINT";
 // Action
-export const ACTION_TEXT_FIELD_PLACEHOLDER = "입력하세요";
+export const ACTION_TEXT_FIELD_PLACEHOLDER = "ENTER";
 // ImageAction
 export const IMAGE_TEENAGER = "10대";
 export const IMAGE_TWENTIES = "20대";
@@ -17,3 +17,4 @@ export const IMAGE_FEMALE = "여성";
 export const IMAGE_MALE = "남성";
 // FeatureActions
 export const ADD_BUTTON = "ADD";
+export const SELECTION_BUTTON = "SELECTION";

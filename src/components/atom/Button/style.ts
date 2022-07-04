@@ -6,7 +6,7 @@ type ContainerProps = {
   theme: Theme;
 };
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.button<ContainerProps>`
   display: flex;
   justify-content: center;
   align-items: center;

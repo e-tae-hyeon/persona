@@ -5,7 +5,7 @@ import * as S from "./style";
 export type FeatureProps = {
   content?: string;
   contents?: string[];
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 };
 
 const Feature = ({ content, contents, onClick }: FeatureProps) => {
@@ -14,7 +14,7 @@ const Feature = ({ content, contents, onClick }: FeatureProps) => {
       {content}
       {contents &&
         contents.map((t) => (
-          <Button onClick={onClick} theme="secondary" key={t}>
+          <Button onClick={onClick} theme="secondary" key={t} value={t}>
             {t}
           </Button>
         ))}

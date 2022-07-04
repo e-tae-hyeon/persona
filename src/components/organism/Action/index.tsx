@@ -21,6 +21,7 @@ const Action = () => {
   const { jobData, lifeStyleData, characterData } = usePersonality();
 
   const props: ActionProps = {
+    content,
     type: isTypeInput ? "input" : "selection",
     onSubmit: (e) => {
       e.preventDefault();
@@ -57,6 +58,20 @@ const Action = () => {
           : content === "lifeStyle"
           ? lifeStyleData
           : characterData,
+      onClick: (e) => {
+        const value = e.currentTarget.value;
+        switch (content) {
+          case "job":
+            onSetJob(value);
+            break;
+          case "lifeStyle":
+            onAddLifeStyle(value);
+            break;
+          case "character":
+            onAddCharacter(value);
+            break;
+        }
+      },
     },
   };
   return <ActionView {...props} />;

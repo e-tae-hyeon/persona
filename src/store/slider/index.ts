@@ -16,8 +16,11 @@ const sliderSlice = createSlice({
     toggleType: (state) => {
       state.isTypeInput = !state.isTypeInput;
     },
+    setTypeSelection: (state) => {
+      state.isTypeInput = false;
+    },
   },
 });
 
-export const { setSlider, toggleType } = sliderSlice.actions;
+export const { setSlider, toggleType, setTypeSelection } = sliderSlice.actions;
 export default sliderSlice.reducer;

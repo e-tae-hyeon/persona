@@ -9,6 +9,7 @@ export type PersonalityProps = {
   onClick: () => void;
   content?: string;
   contents?: string[];
+  isSelected: boolean;
 };
 
 const Personality = ({
@@ -16,11 +17,12 @@ const Personality = ({
   content,
   onClick,
   contents,
+  isSelected,
 }: PersonalityProps) => {
   return (
     <S.Container>
       <Label title={title} />
-      <Cell onClick={onClick} isSelected>
+      <Cell onClick={onClick} isSelected={isSelected}>
         <Feature contents={contents} content={content} />
       </Cell>
     </S.Container>
