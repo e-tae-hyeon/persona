@@ -49,7 +49,7 @@ class MyDocument extends Document {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', '${process.env.REACT_APP_GOOGLE_ANALYTICS_TRACKING_ID}', {
+            gtag('config', '${process.env.GA_ID}', {
               page_path: window.location.pathname,
             });
           `,
